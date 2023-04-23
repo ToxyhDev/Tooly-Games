@@ -1,0 +1,29 @@
+.button {
+  border: 0.3rem $color-font solid;
+  border-radius: 0.8rem;
+  width: 100%;
+  min-height: 4rem;
+  cursor: pointer;
+  &-CTA {
+    background-color: $color-neon;
+    color: $color-background;
+    box-shadow: $color-medium 6px 4px;
+  }
+  &-Standard {
+    background-color: $color-light;
+    color: $color-font;
+    box-shadow: $color-medium 6px 4px;
+  }
+  &--small {
+    width: 50px;
+    min-height: 50px;
+    background-color: $color-medium;
+    color: $color-font;
+  }
+
+  &-others svg {
+    height: 100%;
+    width: 100%;
+    fill: $color-font;
+  }
+}
