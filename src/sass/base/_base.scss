@@ -1,23 +1,34 @@
 html {
   font-size: $global-size;
 }
-
 body {
+  margin: 0;
   background-color: $color-background;
   box-sizing: border-box;
   color: $color-font;
-  margin: 0;
-  padding: 0;
-
   text-align: center;
-  height: 100%;
-  width: 100%;
-  // overflow: hidden;
+
+  overflow: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 16px;
 }
 
 #body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
+  max-width: 460px;
+  width: 100%;
+  height: 100%;
+
+  // padding: 16px;
+
+  // border: 1px solid red;
 }

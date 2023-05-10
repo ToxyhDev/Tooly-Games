@@ -8,6 +8,30 @@ $color-font: #050a30;
 $font-title: 'Lobster', sans-serif;
 $font-body: 'Rowdies', sans-serif;
 $font-size-body: 1.5rem;
+$font-size-tools: 4rem;
 $font-size-title: 5rem;
 
-$global-size: 62, 5%;
+$size-small1: 0.25rem; //4px
+$size-small2: 0.5rem; //8px
+$size-small3: 0.75rem; //12px
+
+$size-medium1: 1rem; //16px
+$size-medium2: 1.25rem; //20px
+$size-medium3: 1.5rem; //24px
+
+$size-large1: 2rem; //32px
+$size-large2: 3rem; //48px
+$size-large3: 4rem; //64px
+$size-large4: 5rem; //80px
+
+$global-size: 100%; //62.5%
+
+$border-thin: 0.2rem;
+$border-medium: 0.25rem;
+$border-large: 0.5rem;
+
+$borderRaduis-square: 99rem;
+$borderRaduis-medium: 0.8rem;
+$borderRaduis-large: 1.2rem;
+
+$boxShadow-medium: 6px 4px;

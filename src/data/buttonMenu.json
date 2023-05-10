@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "className": "button-CTA",
+    "text": "Utiliser un accessoire"
+  },
+  {
+    "id": 2,
+    "className": "button-Standard",
+    "text": "Configurer votre interface"
+  },
+  {
+    "id": 3,
+    "className": "button-Standard",
+    "text": "Interface préconfigurés"
+  }
+]

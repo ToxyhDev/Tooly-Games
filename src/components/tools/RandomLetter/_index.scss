@@ -1,0 +1,23 @@
+.randomLetter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__item {
+    border: $border-medium solid $color-font;
+    border-radius: $borderRaduis-large;
+    background-color: $color-light;
+    width: 10rem;
+    height: 14rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: $size-large2;
+    &--fontSize {
+      border-top: $border-medium solid $color-neon;
+      border-bottom: $border-medium solid $color-neon;
+      min-width: 60%;
+      font-size: $font-size-tools;
+    }
+  }
+}

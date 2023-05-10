@@ -1,22 +1,27 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import ErrorPage from './components/Error/index.jsx'
 import './style/style.css'
 import Home from './pages/Home/index.jsx'
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Home />,
-    errorElement: <ErrorPage />,
-  },
-])
+import Accessories from './pages/Accessories/index.jsx'
+import Accessory from './pages/Accessory/index.jsx'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <section id="body">
-      <RouterProvider router={router} />
-    </section>
-  </React.StrictMode>
+  <section id="body">
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/accessoires">
+          <Route index element={<Accessories />} />
+          <Route
+            path="/accessoires/generateur-lettre"
+            element={<Accessory />}
+          ></Route>
+        </Route>
+
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </BrowserRouter>
+  </section>
 )

@@ -1,29 +1,44 @@
 .button {
-  border: 0.3rem $color-font solid;
-  border-radius: 0.8rem;
-  width: 100%;
-  min-height: 4rem;
+  border: $border-medium $color-font solid;
+  border-radius: $borderRaduis-medium;
+
   cursor: pointer;
   &-CTA {
     background-color: $color-neon;
     color: $color-background;
-    box-shadow: $color-medium 6px 4px;
+    box-shadow: $color-medium $boxShadow-medium;
+    width: 100%;
+    min-height: $size-large3;
   }
   &-Standard {
     background-color: $color-light;
     color: $color-font;
-    box-shadow: $color-medium 6px 4px;
+    box-shadow: $color-medium $boxShadow-medium;
+    width: 100%;
+    min-height: $size-large3;
+    &__flex {
+      display: flex;
+      align-items: center;
+    }
   }
   &--small {
-    width: 50px;
-    min-height: 50px;
+    width: $size-large2;
+    height: $size-large2;
     background-color: $color-medium;
     color: $color-font;
   }
+  &--svg {
+    margin-right: $size-medium2;
+    width: $size-large1;
+    height: $size-large1;
+  }
 
-  &-others svg {
-    height: 100%;
-    width: 100%;
-    fill: $color-font;
+  &-others {
+    svg {
+      height: 100%;
+      width: 100%;
+      fill: $color-font;
+      padding: 0;
+    }
   }
 }
