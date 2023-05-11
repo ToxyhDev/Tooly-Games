@@ -9,12 +9,13 @@ export default function Accessories() {
       <Header />
       <nav className="nav">
         <section className="nav-main">
-          {Object.entries(listTools[0]).map(([key, value]) => (
-            <Link key={key} to={`/accessoires/${value.path}`}>
+          {listTools.map(({ id, name, icon, path, tool }) => (
+            <Link key={id} to={`/accessoires/${path}`}>
               <Button
-                id={value.id}
-                icon={value.icon}
-                text={value.name}
+                id={id}
+                icon={icon}
+                text={name}
+                tool={tool}
                 className={'nav--button button-Standard button-Standard__flex'}
               />
             </Link>

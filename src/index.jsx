@@ -14,10 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/" element={<Home />} />
         <Route path="/accessoires">
           <Route index element={<Accessories />} />
-          <Route
-            path="/accessoires/generateur-lettre"
-            element={<Accessory />}
-          ></Route>
+          <Route path="/accessoires/:path" element={<Accessory />} />
         </Route>
 
         <Route path="*" element={<ErrorPage />} />

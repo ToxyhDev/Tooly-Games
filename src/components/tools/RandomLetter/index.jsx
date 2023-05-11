@@ -101,7 +101,7 @@ export default function RandomLetter() {
 
   return (
     <section className="randomLetter">
-      <TitleTools title={listTools[0].randomLetter.name} />
+      <TitleTools title={listTools[0].name} />
 
       <section className="randomLetter__item">
         <p className="randomLetter__item--fontSize">
