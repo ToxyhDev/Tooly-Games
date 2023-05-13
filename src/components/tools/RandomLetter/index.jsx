@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import TitleTools from '../../TitleTools'
-import { listTools } from '../../../data/listTools'
 
 export default function RandomLetter() {
   const [alphabet, setAlphabet] = useState(
@@ -101,8 +99,6 @@ export default function RandomLetter() {
 
   return (
     <section className="randomLetter">
-      <TitleTools title={listTools[0].name} />
-
       <section className="randomLetter__item">
         <p className="randomLetter__item--fontSize">
           {currentLetter === 'null' ? '.' : currentLetter}

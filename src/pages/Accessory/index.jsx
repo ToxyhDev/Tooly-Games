@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import Header from '../../components/Header'
 import { listTools } from '../../data/listTools'
+import TitleTools from '../../components/TitleTools'
 
 export default function Accessory() {
   const { path } = useParams()
@@ -13,6 +14,7 @@ export default function Accessory() {
   return (
     <section>
       <Header />
+      <TitleTools title={selectedTool.name} />
       {selectedTool.tool}
     </section>
   )
