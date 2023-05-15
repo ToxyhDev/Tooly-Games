@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Controller from '../../Controller'
 
 export default function RandomLetter() {
   const [alphabet, setAlphabet] = useState(
@@ -97,6 +98,21 @@ export default function RandomLetter() {
     localStorage.setItem('currentLetter', currentLetter)
   }, [currentLetter])
 
+  const controllerParam = [
+    {
+      id: 0,
+      use: 'generate',
+      onclick: alphabet.length > 0 ? generateRandomLetter : null,
+      value:
+        alphabet.length > 0 ? 'Générer' : 'Toutes les lettres sont générés',
+    },
+    {
+      id: 1,
+      use: 'reset',
+      onclick: resetGenerator,
+      value: 'Reset',
+    },
+  ]
   return (
     <section className="randomLetter">
       <section className="randomLetter__item">
@@ -113,6 +129,14 @@ export default function RandomLetter() {
       </section>
 
       <p>Lettres apparues : {lettersAppeared.join(', ')}</p>
+      {controllerParam.map(({ id, use, onclick, value }) => (
+        <Controller
+          id={id}
+          use={use}
+          onclick={onclick}
+          value={value}
+        ></Controller>
+      ))}
     </section>
   )
 }
