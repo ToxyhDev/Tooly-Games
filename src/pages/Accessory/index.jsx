@@ -17,7 +17,14 @@ export default function Accessory() {
       <Header />
       <TitleTools title={selectedTool.name} />
       {selectedTool.tool}
-      <Controller />
+      {/* {selectedTool.controller.map(({ id, use, onclick, value }) => (
+        <Controller
+          id={id}
+          use={use}
+          onclick={onclick}
+          value={value}
+        ></Controller>
+      ))} */}
     </section>
   )
 }

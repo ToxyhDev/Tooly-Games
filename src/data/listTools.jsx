@@ -10,7 +10,7 @@ export const listTools = [
     icon: <IconA />,
     path: 'generateur-lettre',
     tool: <RandomLetter />,
-    // controller: ,
+    // controller: controllerParam,
   },
   {
     id: 1,
