@@ -51,6 +51,7 @@ also listed in localStorage */
       id: 0,
       click: generateRandomNumber,
       value: 'generate',
+      type: 'button',
     },
     {
       id: 1,
@@ -59,6 +60,7 @@ also listed in localStorage */
         setDiceResults([])
       },
       value: 'restart',
+      type: 'button',
     },
     {
       id: 2,
@@ -71,6 +73,7 @@ also listed in localStorage */
         setDiceResults([])
       },
       value: 'delete',
+      type: 'button',
     },
   ]
   return (
