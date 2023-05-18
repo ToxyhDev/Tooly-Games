@@ -1,0 +1,27 @@
+.randomLetter__lettersAppeared {
+  margin-top: $size-large1;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-flow: dense;
+  grid-auto-rows: auto;
+  grid-auto-flow: dense;
+  &--letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $size-medium2;
+    height: $size-medium3;
+    margin: $size-small2;
+    border: $color-font $border-medium solid;
+    border-radius: $borderRaduis-thin;
+    padding: $size-small2;
+    background-color: $color-medium;
+    justify-self: center;
+    box-shadow: $color-neon $boxShadow-medium;
+    &:last-child {
+      background-color: $color-light;
+      box-shadow: $color-medium $boxShadow-medium;
+    }
+  }
+}

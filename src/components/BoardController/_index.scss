@@ -1,0 +1,53 @@
+.BoardControl {
+  border: $border-medium solid $color-font;
+  border-radius: $borderRaduis-medium;
+  margin-top: $size-large1;
+  padding: $size-medium2;
+
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  &--params {
+    background-color: $color-light;
+    box-shadow: $color-medium $boxShadow-medium;
+  }
+  &--settings {
+    background-color: $color-medium;
+    box-shadow: $color-neon $boxShadow-medium;
+  }
+  &__button {
+    // width: $size-large1;
+    // height: $size-large1;
+    padding: 0;
+    border: none;
+    border-radius: $borderRaduis-medium;
+    background-color: transparent;
+    transition: background-color 300ms ease-out;
+    &:hover {
+      background-color: $color-medium;
+    }
+    &--svgStroke {
+      vertical-align: middle;
+      stroke: $color-font;
+      width: $size-large2;
+      height: $size-large2;
+    }
+  }
+  &__label {
+    display: none;
+  }
+  &__input {
+    background-color: $color-light;
+    border: solid $color-light;
+    border-radius: $borderRaduis-medium;
+    text-align: center;
+    padding: $size-small2;
+    width: $size-large2;
+  }
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

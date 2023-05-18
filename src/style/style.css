@@ -9,7 +9,6 @@ body {
   box-sizing: border-box;
   color: #050a30;
   text-align: center;
-  overflow: hidden;
 }
 
 #root {
@@ -153,24 +152,111 @@ li {
   margin-top: 2rem;
 }
 
-.randomLetter {
+.BoardControl {
+  border: 0.25rem solid #050a30;
+  border-radius: 0.8rem;
+  margin-top: 2rem;
+  padding: 1.25rem;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.BoardControl--params {
+  background-color: #cae8ff;
+  box-shadow: #5cb6f9 6px 4px;
+}
+.BoardControl--settings {
+  background-color: #5cb6f9;
+  box-shadow: #233dff 6px 4px;
+}
+.BoardControl__button {
+  padding: 0;
+  border: none;
+  border-radius: 0.8rem;
+  background-color: transparent;
+  transition: background-color 300ms ease-out;
+}
+.BoardControl__button:hover {
+  background-color: #5cb6f9;
+}
+.BoardControl__button--svgStroke {
+  vertical-align: middle;
+  stroke: #050a30;
+  width: 3rem;
+  height: 3rem;
+}
+.BoardControl__label {
+  display: none;
+}
+.BoardControl__input {
+  background-color: #cae8ff;
+  border: solid #cae8ff;
+  border-radius: 0.8rem;
+  text-align: center;
+  padding: 0.5rem;
+  width: 3rem;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.randomLetter__lettersAppeared {
+  margin-top: 2rem;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-flow: dense;
+  grid-auto-rows: auto;
+  grid-auto-flow: dense;
+}
+.randomLetter__lettersAppeared--letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.5rem;
+  margin: 0.5rem;
+  border: #050a30 0.25rem solid;
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+  background-color: #5cb6f9;
+  justify-self: center;
+  box-shadow: #233dff 6px 4px;
+}
+.randomLetter__lettersAppeared--letter:last-child {
+  background-color: #cae8ff;
+  box-shadow: #5cb6f9 6px 4px;
+}
+
+.toolsContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.randomLetter__item {
+.toolsContainer__item {
   border: 0.25rem solid #050a30;
-  border-radius: 1.2rem;
   background-color: #cae8ff;
-  width: 10rem;
-  height: 14rem;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
 }
-.randomLetter__item--fontSize {
+.toolsContainer__item--rectangle {
+  width: 10rem;
+  height: 14rem;
+  border-radius: 1.2rem;
+}
+.toolsContainer__item--square {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 0.8rem;
+}
+.toolsContainer__item--fontSize {
   border-top: 0.25rem solid #233dff;
   border-bottom: 0.25rem solid #233dff;
   min-width: 60%;

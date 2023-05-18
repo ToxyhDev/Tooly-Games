@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import BoardController from '../../BoardController'
 
 export default function Dice() {
   /*variable useState the max value and the displayed value(generate)
@@ -45,17 +46,67 @@ also listed in localStorage */
     localStorage.setItem('diceResults', JSON.stringify(diceResults))
   }, [diceResults])
 
+  const controllerParams = [
+    {
+      id: 0,
+      click: generateRandomNumber,
+      value: 'generate',
+    },
+    {
+      id: 1,
+      click: () => {
+        localStorage.removeItem('diceResults')
+        setDiceResults([])
+      },
+      value: 'restart',
+    },
+    {
+      id: 2,
+      click: () => {
+        localStorage.removeItem('faceDiceMax')
+        localStorage.removeItem('numberDices')
+        localStorage.removeItem('diceResults')
+        setFaceDiceMax(6)
+        setNumberDices(1)
+        setDiceResults([])
+      },
+      value: 'delete',
+    },
+  ]
   return (
-    <section>
-      <section>
-        {diceResults.length === 0 ? (
-          <p>.</p>
-        ) : (
-          diceResults.map((result, index) => <p key={index}>{result}</p>)
-        )}
-      </section>
+    <section className="toolsContainer">
+      {diceResults.length === 0 ? (
+        <section className="toolsContainer__item--square toolsContainer__item">
+          <p className="toolsContainer__item--fontSize">.</p>
+        </section>
+      ) : (
+        diceResults.map((result, index) => {
+          let valueWithHeight
+          switch (numberDices) {
+            case 3:
+              valueWithHeight = '6rem'
+              break
+            default:
+              console.log(valueWithHeight)
+              break
+          }
+          return (
+            <section
+              className="toolsContainer__item--square toolsContainer__item"
+              style={{ width: valueWithHeight, height: valueWithHeight }}
+            >
+              <p key={index} className="toolsContainer__item--fontSize">
+                {result}
+              </p>
+            </section>
+          )
+        })
+      )}
 
-      <button onClick={generateRandomNumber}>Générer</button>
+      <BoardController
+        controllerParams={controllerParams}
+        controlType="params"
+      />
 
       <br />
       <br />
@@ -84,19 +135,6 @@ also listed in localStorage */
           </option>
         ))}
       </select>
-
-      <button
-        onClick={() => {
-          localStorage.removeItem('faceDiceMax')
-          localStorage.removeItem('numberDices')
-          localStorage.removeItem('diceResults')
-          setFaceDiceMax(6)
-          setNumberDices(1)
-          setDiceResults([])
-        }}
-      >
-        Reset
-      </button>
     </section>
   )
 }

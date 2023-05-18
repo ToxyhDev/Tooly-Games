@@ -6,13 +6,14 @@
 @import './sass/base/typographies';
 
 @import './pages/Home/index.scss';
+@import './pages/Accessory/index.scss';
 
 @import './components/Name/index.scss';
 @import './components/Button/index.scss';
 @import './components/Header/index.scss';
 @import './components/TitleTools/index.scss';
-@import './pages/Accessory/index.scss';
-@import './components/Controller/index';
+@import './components/BoardController/index';
+@import './components/tools/RandomLetter/index';
 
 @import './components/tools/index.scss';
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Rowdies:wght@300&display=swap');

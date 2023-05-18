@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-// import Controller from '../../Controller'
+import BoardController from '../../BoardController'
 
 export default function RandomLetter() {
   const [alphabet, setAlphabet] = useState(
@@ -98,41 +98,41 @@ export default function RandomLetter() {
     localStorage.setItem('currentLetter', currentLetter)
   }, [currentLetter])
 
-  // function exportControllerParam() {
-  const controllerParam = [
+  const controllerParams = [
     {
       id: 0,
-      use: 'generate',
-      onclick: alphabet.length > 0 ? generateRandomLetter : null,
-      value:
-        alphabet.length > 0 ? 'Générer' : 'Toutes les lettres sont générés',
+      click: alphabet.length > 0 ? generateRandomLetter : null,
+      value: alphabet.length > 0 ? 'generate' : 'null',
+      type: 'button',
     },
     {
       id: 1,
-      use: 'reset',
-      onclick: resetGenerator,
-      value: 'Reset',
+      click: resetGenerator,
+      value: 'delete',
+      type: 'button',
     },
   ]
-  //   return controllerParam
-  // }
 
   return (
-    <section className="randomLetter">
-      <section className="randomLetter__item">
-        <p className="randomLetter__item--fontSize">
+    <section className="toolsContainer">
+      <section className="toolsContainer__item--rectangle toolsContainer__item">
+        <p className="toolsContainer__item--fontSize">
           {currentLetter === 'null' ? '.' : currentLetter}
         </p>
       </section>
 
-      <section className="randomLetter__boardControl">
-        <button onClick={alphabet.length > 0 ? generateRandomLetter : null}>
-          {alphabet.length > 0 ? 'Générer' : 'Toutes les lettres sont générés'}
-        </button>
-        <button onClick={resetGenerator}>Reset</button>
-      </section>
+      <BoardController
+        controllerParams={controllerParams}
+        controlType="params"
+      />
 
-      <p>Lettres apparues : {lettersAppeared.join(', ')}</p>
+      <section className="randomLetter__lettersAppeared">
+        {lettersAppeared.map((value, index) => (
+          <p key={index} className="randomLetter__lettersAppeared--letter">
+            {value}
+          </p>
+        ))}
+      </section>
     </section>
   )
 }
