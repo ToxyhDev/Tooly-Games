@@ -1,9 +1,9 @@
 import {
-  IconRandom,
   IconRestart,
   IconDelete,
   IconAdd,
   IconRemove,
+  IconPlay,
 } from '../../assets/svgBoardController'
 import BoardControlButton from './button'
 import BoardControlInput from './input'
@@ -16,7 +16,7 @@ export default function BoardController({ controllerParams, controlType }) {
           let buttonContent
           switch (value) {
             case 'generate':
-              buttonContent = <IconRandom />
+              buttonContent = <IconPlay />
               break
             case 'restart':
               buttonContent = <IconRestart />

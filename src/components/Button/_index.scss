@@ -37,8 +37,14 @@
     svg {
       height: 100%;
       width: 100%;
-      fill: $color-font;
+      // fill: $color-font;
       padding: 0;
+    }
+    &-stroke {
+      stroke: $color-font;
+    }
+    &-fill {
+      fill: $color-font;
     }
   }
 }

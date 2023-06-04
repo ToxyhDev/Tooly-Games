@@ -5,6 +5,50 @@ $color-neon: #233dff;
 $color-dark: #12229d;
 $color-font: #050a30;
 
+$color-background-blue: #d9d9d9;
+$color-light-blue: #cae8ff;
+$color-medium-blue: #5cb6f9;
+$color-neon-blue: #233dff;
+$color-dark-blue: #12229d;
+$color-font-blue: #050a30;
+
+$color-background-green: #f2f5de;
+$color-light-green: #d0ffb7;
+$color-medium-green: #86e7b8;
+$color-neon-green: #0c8346;
+$color-dark-green: #243010;
+$color-font-green: #363732;
+
+.theme-blue {
+  --color-background: #{$color-background-blue};
+  --color-light: #{$color-light-blue};
+  --color-medium: #{$color-medium-blue};
+  --color-neon: #{$color-neon-blue};
+  --color-dark: #{$color-dark-blue};
+  --color-font: #{$color-font-blue};
+}
+
+.theme-green {
+  --color-background: #{$color-background-green};
+  --color-light: #{$color-light-green};
+  --color-medium: #{$color-medium-green};
+  --color-neon: #{$color-neon-green};
+  --color-dark: #{$color-dark-green};
+  --color-font: #{$color-font-green};
+}
+
+#test_color {
+  color: var(--color-neon);
+  font-size: large;
+}
+
+// $color-background: #f2f5de;
+// $color-light: #d0ffb7;
+// $color-medium: #86e7b8;
+// $color-neon: #0c8346;
+// $color-dark: #243010;
+// $color-font: #363732;
+
 $font-title: 'Lobster', sans-serif;
 $font-body: 'Rowdies', sans-serif;
 $font-size-body: 1.5rem;

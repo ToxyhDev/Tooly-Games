@@ -1,4 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Rowdies:wght@300&display=swap");
+.theme-blue {
+  --color-background: #d9d9d9;
+  --color-light: #cae8ff;
+  --color-medium: #5cb6f9;
+  --color-neon: #233dff;
+  --color-dark: #12229d;
+  --color-font: #050a30;
+}
+
+.theme-green {
+  --color-background: #f2f5de;
+  --color-light: #d0ffb7;
+  --color-medium: #86e7b8;
+  --color-neon: #0c8346;
+  --color-dark: #243010;
+  --color-font: #363732;
+}
+
+#test_color {
+  color: var(--color-neon);
+  font-size: large;
+}
+
 html {
   font-size: 100%;
 }
@@ -130,13 +153,18 @@ li {
 .button-others svg {
   height: 100%;
   width: 100%;
-  fill: #050a30;
   padding: 0;
+}
+.button-others-stroke {
+  stroke: #050a30;
+}
+.button-others-fill {
+  fill: #050a30;
 }
 
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
