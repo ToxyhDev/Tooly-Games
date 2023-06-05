@@ -95,6 +95,7 @@ also listed in localStorage */
           }
           return (
             <section
+              key={index}
               className="toolsContainer__item--square toolsContainer__item"
               style={{ width: valueWithHeight, height: valueWithHeight }}
             >

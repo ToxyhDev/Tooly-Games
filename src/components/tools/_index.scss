@@ -4,8 +4,8 @@
   justify-content: center;
   align-items: center;
   &__item {
-    border: $border-medium solid $color-font;
-    background-color: $color-light;
+    border: $border-medium solid var(--color-font);
+    background-color: var(--color-light);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,8 +21,8 @@
       border-radius: $borderRaduis-medium;
     }
     &--fontSize {
-      border-top: $border-medium solid $color-neon;
-      border-bottom: $border-medium solid $color-neon;
+      border-top: $border-medium solid var(--color-neon);
+      border-bottom: $border-medium solid var(--color-neon);
       min-width: 60%;
       font-size: $font-size-tools;
     }

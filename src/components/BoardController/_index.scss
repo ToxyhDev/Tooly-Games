@@ -1,5 +1,5 @@
 .BoardControl {
-  border: $border-medium solid $color-font;
+  border: $border-medium solid var(--color-font);
   border-radius: $borderRaduis-medium;
   margin-top: $size-large1;
   padding: $size-medium2;
@@ -9,12 +9,12 @@
   align-items: center;
   justify-content: space-around;
   &--params {
-    background-color: $color-light;
-    box-shadow: $color-medium $boxShadow-medium;
+    background-color: var(--color-light);
+    box-shadow: var(--color-medium) $boxShadow-medium;
   }
   &--settings {
-    background-color: $color-medium;
-    box-shadow: $color-neon $boxShadow-medium;
+    background-color: var(--color-medium);
+    box-shadow: var(--color-neon) $boxShadow-medium;
   }
   &__button {
     // width: $size-large1;
@@ -25,11 +25,11 @@
     background-color: transparent;
     transition: background-color 300ms ease-out;
     &:hover {
-      background-color: $color-medium;
+      background-color: var(--color-medium);
     }
     &--svgStroke {
       vertical-align: middle;
-      stroke: $color-font;
+      stroke: var(--color-font);
       width: $size-large2;
       height: $size-large2;
     }
@@ -38,8 +38,8 @@
     display: none;
   }
   &__input {
-    background-color: $color-light;
-    border: solid $color-light;
+    background-color: var(--color-light);
+    border: solid var(--color-light);
     border-radius: $borderRaduis-medium;
     text-align: center;
     padding: $size-small2;

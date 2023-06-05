@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Rowdies:wght@300&display=swap");
+:root {
+  --color-background: #d9d9d9;
+  --color-light: #cae8ff;
+  --color-medium: #5cb6f9;
+  --color-neon: #233dff;
+  --color-dark: #12229d;
+  --color-font: #050a30;
+}
+
 .theme-blue {
   --color-background: #d9d9d9;
   --color-light: #cae8ff;
@@ -17,20 +26,15 @@
   --color-font: #363732;
 }
 
-#test_color {
-  color: var(--color-neon);
-  font-size: large;
-}
-
 html {
   font-size: 100%;
 }
 
 body {
   margin: 0;
-  background-color: #d9d9d9;
+  background-color: var(--color-background);
   box-sizing: border-box;
-  color: #050a30;
+  color: var(--color-font);
   text-align: center;
 }
 
@@ -57,7 +61,7 @@ a {
 }
 
 h1 {
-  color: #050a30;
+  color: var(--color-font);
   font-family: "Lobster", sans-serif;
   font-size: 5rem;
   margin: 0;
@@ -103,35 +107,62 @@ li {
   margin-top: 1.25rem;
 }
 
+.settings__theme {
+  margin-top: 1.5rem;
+  border: solid 0.25rem var(--color-font);
+  border-radius: 0.8rem;
+  background-color: var(--color-light);
+}
+.settings__theme--color {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+  border-radius: 99rem;
+  margin: 0.75rem;
+}
+.settings__theme--color-active {
+  border: solid 0.25rem var(--color-font);
+}
+.settings__theme--color-blue {
+  background-color: #233dff;
+}
+.settings__theme--color-green {
+  background-color: #0c8346;
+}
+
 .name {
   display: flex;
   align-items: baseline;
   justify-content: center;
 }
 .name__letters {
-  text-shadow: #5cb6f9 4px 2px;
+  text-shadow: var(--color-medium) 4px 2px;
 }
 .name__dice {
   height: 50px;
   width: 50px;
 }
 
+img {
+  background-color: var(--color-medium);
+}
+
 .button {
-  border: 0.25rem #050a30 solid;
+  border: 0.25rem var(--color-font) solid;
   border-radius: 0.8rem;
   cursor: pointer;
 }
 .button-CTA {
-  background-color: #233dff;
-  color: #d9d9d9;
-  box-shadow: #5cb6f9 6px 4px;
+  background-color: var(--color-neon);
+  color: var(--color-background);
+  box-shadow: var(--color-medium) 6px 4px;
   width: 100%;
   min-height: 4rem;
 }
 .button-Standard {
-  background-color: #cae8ff;
-  color: #050a30;
-  box-shadow: #5cb6f9 6px 4px;
+  background-color: var(--color-light);
+  color: var(--color-font);
+  box-shadow: var(--color-medium) 6px 4px;
   width: 100%;
   min-height: 4rem;
 }
@@ -142,8 +173,8 @@ li {
 .button--small {
   width: 3rem;
   height: 3rem;
-  background-color: #5cb6f9;
-  color: #050a30;
+  background-color: var(--color-medium);
+  color: var(--color-font);
 }
 .button--svg {
   margin-right: 1.25rem;
@@ -156,10 +187,10 @@ li {
   padding: 0;
 }
 .button-others-stroke {
-  stroke: #050a30;
+  stroke: var(--color-font);
 }
 .button-others-fill {
-  fill: #050a30;
+  fill: var(--color-font);
 }
 
 .header {
@@ -174,14 +205,14 @@ li {
 
 .title {
   width: 90%;
-  border-bottom: 0.25rem solid #050a30;
+  border-bottom: 0.25rem solid var(--color-font);
   text-align: left;
   word-wrap: break-word;
   margin-top: 2rem;
 }
 
 .BoardControl {
-  border: 0.25rem solid #050a30;
+  border: 0.25rem solid var(--color-font);
   border-radius: 0.8rem;
   margin-top: 2rem;
   padding: 1.25rem;
@@ -191,12 +222,12 @@ li {
   justify-content: space-around;
 }
 .BoardControl--params {
-  background-color: #cae8ff;
-  box-shadow: #5cb6f9 6px 4px;
+  background-color: var(--color-light);
+  box-shadow: var(--color-medium) 6px 4px;
 }
 .BoardControl--settings {
-  background-color: #5cb6f9;
-  box-shadow: #233dff 6px 4px;
+  background-color: var(--color-medium);
+  box-shadow: var(--color-neon) 6px 4px;
 }
 .BoardControl__button {
   padding: 0;
@@ -206,11 +237,11 @@ li {
   transition: background-color 300ms ease-out;
 }
 .BoardControl__button:hover {
-  background-color: #5cb6f9;
+  background-color: var(--color-medium);
 }
 .BoardControl__button--svgStroke {
   vertical-align: middle;
-  stroke: #050a30;
+  stroke: var(--color-font);
   width: 3rem;
   height: 3rem;
 }
@@ -218,8 +249,8 @@ li {
   display: none;
 }
 .BoardControl__input {
-  background-color: #cae8ff;
-  border: solid #cae8ff;
+  background-color: var(--color-light);
+  border: solid var(--color-light);
   border-radius: 0.8rem;
   text-align: center;
   padding: 0.5rem;
@@ -248,16 +279,16 @@ input[type=number]::-webkit-outer-spin-button {
   width: 1.25rem;
   height: 1.5rem;
   margin: 0.5rem;
-  border: #050a30 0.25rem solid;
+  border: var(--color-font) 0.25rem solid;
   border-radius: 0.4rem;
   padding: 0.5rem;
-  background-color: #5cb6f9;
+  background-color: var(--color-medium);
   justify-self: center;
-  box-shadow: #233dff 6px 4px;
+  box-shadow: var(--color-neon) 6px 4px;
 }
 .randomLetter__lettersAppeared--letter:last-child {
-  background-color: #cae8ff;
-  box-shadow: #5cb6f9 6px 4px;
+  background-color: var(--color-light);
+  box-shadow: var(--color-medium) 6px 4px;
 }
 
 .toolsContainer {
@@ -267,8 +298,8 @@ input[type=number]::-webkit-outer-spin-button {
   align-items: center;
 }
 .toolsContainer__item {
-  border: 0.25rem solid #050a30;
-  background-color: #cae8ff;
+  border: 0.25rem solid var(--color-font);
+  background-color: var(--color-light);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -285,8 +316,8 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 0.8rem;
 }
 .toolsContainer__item--fontSize {
-  border-top: 0.25rem solid #233dff;
-  border-bottom: 0.25rem solid #233dff;
+  border-top: 0.25rem solid var(--color-neon);
+  border-bottom: 0.25rem solid var(--color-neon);
   min-width: 60%;
   font-size: 4rem;
 }

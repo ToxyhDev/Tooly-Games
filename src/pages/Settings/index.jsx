@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Header from '../../components/Header'
+import TitleTools from '../../components/TitleTools'
 
 export default function Settings() {
   const [theme, setTheme] = useState('')
@@ -10,13 +11,36 @@ export default function Settings() {
     localStorage.setItem('theme', theme)
   }
 
+  const listTheme = [
+    {
+      id: 1,
+      color: 'blue',
+    },
+    {
+      id: 2,
+      color: 'green',
+    },
+  ]
+  //Add active border with color using
   return (
     <>
       <Header />
       <div>
-        <h6 id="test_color">Ma Application</h6>
-        <button onClick={() => changeTheme('theme-blue')}>Thème Bleu</button>
-        <button onClick={() => changeTheme('theme-green')}>Thème Vert</button>
+        <TitleTools title={'Settings'} />
+        <section className="settings__theme">
+          {listTheme.map((themeColor) => {
+            return (
+              <button
+                key={themeColor.id}
+                onClick={() => changeTheme(`theme-${themeColor.color}`)}
+                className={`settings__theme--color settings__theme--color-${themeColor.color}`}
+              ></button>
+            )
+          })}
+        </section>
+
+        {/* <button onClick={() => changeTheme('theme-blue')}>Thème Bleu</button>
+        <button onClick={() => changeTheme('theme-green')}>Thème Vert</button> */}
       </div>
     </>
   )

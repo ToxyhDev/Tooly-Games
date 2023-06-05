@@ -1,0 +1,24 @@
+.settings {
+  &__theme {
+    margin-top: $size-medium3;
+    border: solid $border-medium var(--color-font);
+    border-radius: $borderRaduis-medium;
+    background-color: var(--color-light);
+    &--color {
+      width: $size-medium3;
+      height: $size-medium3;
+      border: none;
+      border-radius: $borderRaduis-square;
+      margin: $size-small3;
+      &-active {
+        border: solid $border-medium var(--color-font);
+      }
+      &-blue {
+        background-color: $color-neon-blue;
+      }
+      &-green {
+        background-color: $color-neon-green;
+      }
+    }
+  }
+}

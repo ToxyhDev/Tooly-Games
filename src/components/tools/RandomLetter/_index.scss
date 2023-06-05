@@ -13,15 +13,15 @@
     width: $size-medium2;
     height: $size-medium3;
     margin: $size-small2;
-    border: $color-font $border-medium solid;
+    border: var(--color-font) $border-medium solid;
     border-radius: $borderRaduis-thin;
     padding: $size-small2;
-    background-color: $color-medium;
+    background-color: var(--color-medium);
     justify-self: center;
-    box-shadow: $color-neon $boxShadow-medium;
+    box-shadow: var(--color-neon) $boxShadow-medium;
     &:last-child {
-      background-color: $color-light;
-      box-shadow: $color-medium $boxShadow-medium;
+      background-color: var(--color-light);
+      box-shadow: var(--color-medium) $boxShadow-medium;
     }
   }
 }
