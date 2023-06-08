@@ -1,23 +1,72 @@
 .settings {
-  &__theme {
+  &__items {
     margin-top: $size-medium3;
     border: solid $border-medium var(--color-font);
     border-radius: $borderRaduis-medium;
     background-color: var(--color-light);
+    &--title {
+      text-align: left;
+      padding-left: $size-small2;
+      font-style: italic;
+    }
+  }
+  &__theme {
     &--color {
-      width: $size-medium3;
-      height: $size-medium3;
-      border: none;
-      border-radius: $borderRaduis-square;
-      margin: $size-small3;
+      display: flex;
+      justify-content: center;
+      &-items {
+        width: $size-medium3;
+        height: $size-medium3;
+        border: none;
+        border-radius: $borderRaduis-square;
+        margin: $size-small3;
+      }
       &-active {
-        border: solid $border-medium var(--color-font);
+        border: solid $border-thin var(--color-font);
       }
       &-blue {
         background-color: $color-neon-blue;
       }
       &-green {
         background-color: $color-neon-green;
+      }
+      &-red {
+        background-color: $color-neon-red;
+      }
+      &-yellow {
+        background-color: $color-neon-yellow;
+      }
+    }
+  }
+  &__localStorage {
+    &--delete {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &-button {
+        background-color: red;
+        width: $size-large2;
+        height: $size-large2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &-attention {
+        font-size: $size-medium2;
+        text-decoration: underline red;
+      }
+      &-choice {
+        margin-top: $size-medium2;
+        margin-bottom: $size-medium2;
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+        & .yes {
+          background-color: red;
+        }
+        & .no {
+          background-color: transparent;
+        }
       }
     }
   }

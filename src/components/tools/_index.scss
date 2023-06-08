@@ -23,6 +23,7 @@
     &--fontSize {
       border-top: $border-medium solid var(--color-neon);
       border-bottom: $border-medium solid var(--color-neon);
+      color: var(--color-font);
       min-width: 60%;
       font-size: $font-size-tools;
     }

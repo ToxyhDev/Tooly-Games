@@ -9,12 +9,6 @@
   &__dice {
     height: 50px;
     width: 50px;
-    // background-color: var(--color-medium);
-    // img {
-    //   background-color: var(--color-medium);
-    // }
+    filter: drop-shadow($boxShadow-thin var(--color-medium));
   }
-}
-img {
-  background-color: var(--color-medium);
 }

@@ -46,7 +46,7 @@ export default function RandomLetter() {
     console.log('Lettre aléatoire: ' + letterGenerate)
 
     setCurrentLetter(letterGenerate)
-    setLettersAppeared([...lettersAppeared, letterGenerate])
+    setLettersAppeared([letterGenerate, ...lettersAppeared])
     setAlphabet(alphabet.filter((letter) => letter !== letterGenerate))
   }
 

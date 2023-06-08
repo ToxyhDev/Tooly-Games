@@ -1,18 +1,30 @@
-$color-background-blue: #d9d9d9;
+$color-background: #d9d9d9;
+
 $color-light-blue: #cae8ff;
 $color-medium-blue: #5cb6f9;
 $color-neon-blue: #233dff;
 $color-dark-blue: #12229d;
 $color-font-blue: #050a30;
 
-$color-background-green: #f2f5de;
 $color-light-green: #d0ffb7;
-$color-medium-green: #86e7b8;
-$color-neon-green: #0c8346;
+$color-medium-green: #18ff6d;
+$color-neon-green: #00af54;
 $color-dark-green: #243010;
 $color-font-green: #363732;
+
+$color-light-red: #d58686;
+$color-medium-red: #d62839;
+$color-neon-red: #b80517;
+$color-dark-red: #5a0c1d;
+$color-font-red: #3e0c17;
+
+$color-light-yellow: #ffed96;
+$color-medium-yellow: #ffda24;
+$color-neon-yellow: #c79f29;
+$color-dark-yellow: #5f5212;
+$color-font-yellow: #252008;
 :root {
-  --color-background: #{$color-background-blue};
+  --color-background: #{$color-background};
   --color-light: #{$color-light-blue};
   --color-medium: #{$color-medium-blue};
   --color-neon: #{$color-neon-blue};
@@ -20,7 +32,7 @@ $color-font-green: #363732;
   --color-font: #{$color-font-blue};
 }
 .theme-blue {
-  --color-background: #{$color-background-blue};
+  --color-background: #{$color-background};
   --color-light: #{$color-light-blue};
   --color-medium: #{$color-medium-blue};
   --color-neon: #{$color-neon-blue};
@@ -29,12 +41,30 @@ $color-font-green: #363732;
 }
 
 .theme-green {
-  --color-background: #{$color-background-green};
+  --color-background: #{$color-background};
   --color-light: #{$color-light-green};
   --color-medium: #{$color-medium-green};
   --color-neon: #{$color-neon-green};
   --color-dark: #{$color-dark-green};
   --color-font: #{$color-font-green};
+}
+
+.theme-red {
+  --color-background: #{$color-background};
+  --color-light: #{$color-light-red};
+  --color-medium: #{$color-medium-red};
+  --color-neon: #{$color-neon-red};
+  --color-dark: #{$color-dark-red};
+  --color-font: #{$color-font-red};
+}
+
+.theme-yellow {
+  --color-background: #{$color-background};
+  --color-light: #{$color-light-yellow};
+  --color-medium: #{$color-medium-yellow};
+  --color-neon: #{$color-neon-yellow};
+  --color-dark: #{$color-dark-yellow};
+  --color-font: #{$color-font-yellow};
 }
 
 $font-title: 'Lobster', sans-serif;
@@ -67,4 +97,5 @@ $borderRaduis-thin: 0.4rem;
 $borderRaduis-medium: 0.8rem;
 $borderRaduis-large: 1.2rem;
 
+$boxShadow-thin: 3px 2px;
 $boxShadow-medium: 6px 4px;
