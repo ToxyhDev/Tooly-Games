@@ -76,8 +76,46 @@ also listed in localStorage */
       type: 'button',
     },
   ]
+
+  const controllerSettings = [
+    {
+      id: 0,
+      label: 'faceDiceSelect',
+      valueMax: faceDiceMax,
+      onChange: (e) => chooseFaceDiceMax(parseInt(e.target.value)),
+      options: Array.from({ length: 15 }, (_, index) => index + 6).map(
+        (number) => (
+          <option key={number} value={number}>
+            {number}
+          </option>
+        )
+      ),
+      title: 'Faces:',
+      type: 'select',
+    },
+    {
+      id: 1,
+      label: 'numberDicesSelect',
+      valueMax: numberDices,
+      onChange: (e) => chooseNumberDices(parseInt(e.target.value)),
+      options: Array.from({ length: 12 }, (_, index) => index + 1).map(
+        (number) => (
+          <option key={number} value={number}>
+            {number}
+          </option>
+        )
+      ),
+      title: 'Dés:',
+      type: 'select',
+    },
+  ]
   return (
     <section className="toolsContainer">
+      <BoardController
+        controllerParams={controllerSettings}
+        controlType="settings"
+      />
+
       {diceResults.length === 0 ? (
         <section className="toolsContainer__item--square toolsContainer__item">
           <p className="toolsContainer__item--fontSize">.</p>
@@ -111,34 +149,6 @@ also listed in localStorage */
         controllerParams={controllerParams}
         controlType="params"
       />
-
-      <br />
-      <br />
-      <label htmlFor="faceDiceSelect">Nombre de faces :</label>
-      <select
-        id="faceDiceSelect"
-        value={faceDiceMax}
-        onChange={(e) => chooseFaceDiceMax(parseInt(e.target.value))}
-      >
-        {Array.from({ length: 15 }, (_, index) => index + 6).map((number) => (
-          <option key={number} value={number}>
-            {number}
-          </option>
-        ))}
-      </select>
-
-      <label htmlFor="numberDicesSelect">Nombre de dés :</label>
-      <select
-        id="numberDicesSelect"
-        value={numberDices}
-        onChange={(e) => chooseNumberDices(parseInt(e.target.value))}
-      >
-        {Array.from({ length: 12 }, (_, index) => index + 1).map((number) => (
-          <option key={number} value={number}>
-            {number}
-          </option>
-        ))}
-      </select>
     </section>
   )
 }

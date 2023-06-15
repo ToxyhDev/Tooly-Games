@@ -6,6 +6,7 @@
 
   width: 70%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   &--params {
@@ -44,6 +45,11 @@
     text-align: center;
     padding: $size-small2;
     width: $size-large2;
+  }
+  &__select {
+    background-color: var(--color-light);
+    border: solid var(--color-light);
+    border-radius: $borderRaduis-medium;
   }
 }
 input[type='number']::-webkit-inner-spin-button,
