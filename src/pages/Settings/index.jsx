@@ -5,7 +5,7 @@ import { IconDelete } from '../../assets/svgBoardController'
 import Button from '../../components/Button'
 
 export default function Settings() {
-  const [theme, setTheme] = useState('')
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || '')
   const [deleteLocalStorage, setDeleteLocalStorage] = useState(true)
 
   function changeTheme(theme) {
@@ -57,6 +57,7 @@ export default function Settings() {
             })}
           </div>
         </section>
+        {/* Delete local data */}
         <section className="settings__localStorage settings__items">
           <p className="settings__items--title">Supprimer les données:</p>
           <div className="settings__localStorage--delete">
@@ -80,7 +81,10 @@ export default function Settings() {
                 <div className="settings__localStorage--delete-choice">
                   <Button
                     text={'Oui'}
-                    click={() => localStorage.clear()}
+                    click={() => {
+                      localStorage.clear()
+                      setDeleteLocalStorage(true)
+                    }}
                     className={'yes'}
                   />
                   <Button
