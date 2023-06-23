@@ -21,6 +21,8 @@ also listed in localStorage */
 
   function chooseNumberDices(number) {
     setNumberDices(number)
+    const results = Array.from({ length: number }, () => '.')
+    setDiceResults(results)
   }
 
   /* generate random number */
@@ -118,42 +120,44 @@ also listed in localStorage */
       />
 
       {(() => {
-        let classDisplayLayout = ''
+        let changeClassFontsize = ''
+        let changeSizeItem = ''
         switch (numberDices) {
           case 1:
-            classDisplayLayout = 'diceLayout__grid-1'
+            changeClassFontsize = 'diceLayout__grid--item-fontSize-1'
+            changeSizeItem = 'diceLayout__grid--item-size-1'
             break
           case 2:
           case 3:
-            classDisplayLayout = 'diceLayout__grid-3'
+            changeClassFontsize = 'diceLayout__grid--item-fontSize-3'
+            changeSizeItem = 'diceLayout__grid--item-size-3'
             break
-          case 4:
-          case 5:
-          case 6:
-            classDisplayLayout = 'diceLayout__grid-3'
-            break
-          case 7:
-          case 9:
-          case 10:
-          case 11:
-          case 12:
-            classDisplayLayout = 'diceLayout__grid-3'
-            break
-
           default:
+            changeClassFontsize = 'diceLayout__grid--item-fontSize-all'
+            changeSizeItem = 'diceLayout__grid--item-size-all'
             break
         }
         return (
-          <section className={`diceLayout ${classDisplayLayout}`}>
+          <section className={`diceLayout`}>
             {diceResults.length === 0 ? (
-              <section className="toolsContainer__item--square toolsContainer__item">
-                <p className="toolsContainer__item--fontSize">.</p>
+              <section className={`diceLayout__grid--item ${changeSizeItem}`}>
+                <p
+                  className={`diceLayout__grid--item-fontSize ${changeClassFontsize}`}
+                >
+                  .
+                </p>
               </section>
             ) : (
               diceResults.map((result, index) => {
                 return (
-                  <section key={index} className={`diceLayout__grid--item`}>
-                    <p key={index} className="toolsContainer__item--fontSize">
+                  <section
+                    key={index}
+                    className={`diceLayout__grid--item ${changeSizeItem}`}
+                  >
+                    <p
+                      key={index}
+                      className={`diceLayout__grid--item-fontSize ${changeClassFontsize}`}
+                    >
                       {result}
                     </p>
                   </section>
@@ -163,37 +167,6 @@ also listed in localStorage */
           </section>
         )
       })()}
-
-      {/* {diceResults.length === 0 ? (
-        <section className="toolsContainer__item--square toolsContainer__item">
-          <p className="toolsContainer__item--fontSize">.</p>
-        </section>
-      ) : (
-        diceResults.map((result, index) => {
-          let classDisplayLayout = 'Pas de class layout'
-          if (numberDices === 3) {
-            classDisplayLayout = 'diceLayout__grid-3'
-          } else {
-            console.log(classDisplayLayout)
-          }
-
-          return (
-            <section className="diceLayout">
-              <section
-                key={index}
-                className={`toolsContainer__item--square 
-              toolsContainer__item 
-              ${classDisplayLayout}
-              `}
-              >
-                <p key={index} className="toolsContainer__item--fontSize">
-                  {result}
-                </p>
-              </section>
-            </section>
-          )
-        })
-      )} */}
 
       <BoardController
         controllerParams={controllerParams}

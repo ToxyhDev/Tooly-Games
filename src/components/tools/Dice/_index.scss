@@ -1,26 +1,50 @@
 .diceLayout {
-  border: 1px solid red;
+  // border: 1px solid red;
   width: 100%;
-  display: grid;
-  gap: $size-medium2;
+  display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: $size-medium2;
   padding-top: $size-large2;
   &__grid {
     &--item {
       border: $border-medium solid var(--color-font);
       background-color: var(--color-light);
+
       display: flex;
       justify-content: center;
       align-items: center;
       border-radius: $borderRaduis-large;
-    }
-    &-1 {
-      grid-template-columns: 10rem;
-      grid-template-rows: 10rem;
-    }
-    &-3 {
-      grid-template-columns: 5rem 5rem 5rem 5rem;
-      grid-template-rows: 5rem 5rem 5rem;
+
+      &-size {
+        &-1 {
+          width: 10rem;
+          height: 10rem;
+        }
+        &-3 {
+          width: 7rem;
+          height: 7rem;
+        }
+        &-all {
+          width: $size-large4;
+          height: $size-large4;
+        }
+      }
+
+      &-fontSize {
+        border-top: $border-medium solid var(--color-neon);
+        border-bottom: $border-medium solid var(--color-neon);
+        min-width: 60%;
+        &-1 {
+          font-size: $font-size-tools;
+        }
+        &-3 {
+          font-size: 4rem;
+        }
+        &-all {
+          font-size: 3rem;
+        }
+      }
     }
   }
 }
