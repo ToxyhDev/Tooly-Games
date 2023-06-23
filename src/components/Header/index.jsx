@@ -1,6 +1,6 @@
 import Button from '../Button'
 import Name from '../Name'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const iconHome = (
   <svg
@@ -14,16 +14,45 @@ const iconHome = (
   </svg>
 )
 
+const iconBack = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"
+    />
+  </svg>
+)
+
 export default function Header() {
+  const navigate = useNavigate()
+
+  const handleGoBack = () => {
+    navigate(-1)
+  }
+
   return (
     <header className="header header__margin">
+      <Button
+        className={`button--small button-others button-others-stroke`}
+        text={iconBack}
+        click={handleGoBack}
+      />
+
+      <Name></Name>
+
       <Link to={'/'}>
         <Button
-          className={`button--small button-others`}
+          className={`button--small button-others button-others-fill`}
           text={iconHome}
         ></Button>
       </Link>
-      <Name></Name>
     </header>
   )
 }

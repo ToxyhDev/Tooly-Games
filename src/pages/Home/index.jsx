@@ -44,8 +44,10 @@ export default function Home() {
           ))}
         </section>
         <section className="nav-others">
-          {buttonOthers.map(({ id, className, icon }, index) => (
-            <Button key={index} id={id} className={className} icon={icon} />
+          {buttonOthers.map(({ id, className, icon, path }, index) => (
+            <Link key={index} to={path}>
+              <Button key={index} id={id} className={className} icon={icon} />
+            </Link>
           ))}
         </section>
       </nav>

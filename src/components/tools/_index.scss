@@ -1,0 +1,31 @@
+.toolsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__item {
+    border: $border-medium solid var(--color-font);
+    background-color: var(--color-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: $size-large2;
+    &--rectangle {
+      width: 10rem;
+      height: 14rem;
+      border-radius: $borderRaduis-large;
+    }
+    &--square {
+      width: 10rem;
+      height: 10rem;
+      border-radius: $borderRaduis-medium;
+    }
+    &--fontSize {
+      border-top: $border-medium solid var(--color-neon);
+      border-bottom: $border-medium solid var(--color-neon);
+      color: var(--color-font);
+      min-width: 60%;
+      font-size: $font-size-tools;
+    }
+  }
+}

@@ -4,7 +4,7 @@ a {
   color: none;
 }
 h1 {
-  color: $color-font;
+  color: var(--color-font);
   font-family: $font-title;
   font-size: $font-size-title;
   margin: 0;

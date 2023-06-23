@@ -1,23 +1,27 @@
-.randomLetter {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  &__item {
-    border: $border-medium solid $color-font;
-    border-radius: $borderRaduis-large;
-    background-color: $color-light;
-    width: 10rem;
-    height: 14rem;
+.randomLetter__lettersAppeared {
+  margin-top: $size-large1;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-flow: dense;
+  grid-auto-rows: auto;
+  &--letter {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-top: $size-large2;
-    &--fontSize {
-      border-top: $border-medium solid $color-neon;
-      border-bottom: $border-medium solid $color-neon;
-      min-width: 60%;
-      font-size: $font-size-tools;
+    justify-content: center;
+    width: $size-medium2;
+    height: $size-medium3;
+    margin: $size-small2;
+    border: var(--color-font) $border-medium solid;
+    border-radius: $borderRaduis-thin;
+    padding: $size-small2;
+    background-color: var(--color-medium);
+    justify-self: center;
+    box-shadow: var(--color-neon) $boxShadow-medium;
+    color: var(--color-font);
+    &:first-child {
+      background-color: var(--color-light);
+      box-shadow: var(--color-medium) $boxShadow-medium;
     }
   }
 }
