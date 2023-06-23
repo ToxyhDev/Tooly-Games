@@ -109,6 +109,7 @@ also listed in localStorage */
       type: 'select',
     },
   ]
+
   return (
     <section className="toolsContainer">
       <BoardController
@@ -116,34 +117,83 @@ also listed in localStorage */
         controlType="settings"
       />
 
-      {diceResults.length === 0 ? (
+      {(() => {
+        let classDisplayLayout = ''
+        switch (numberDices) {
+          case 1:
+            classDisplayLayout = 'diceLayout__grid-1'
+            break
+          case 2:
+          case 3:
+            classDisplayLayout = 'diceLayout__grid-3'
+            break
+          case 4:
+          case 5:
+          case 6:
+            classDisplayLayout = 'diceLayout__grid-3'
+            break
+          case 7:
+          case 9:
+          case 10:
+          case 11:
+          case 12:
+            classDisplayLayout = 'diceLayout__grid-3'
+            break
+
+          default:
+            break
+        }
+        return (
+          <section className={`diceLayout ${classDisplayLayout}`}>
+            {diceResults.length === 0 ? (
+              <section className="toolsContainer__item--square toolsContainer__item">
+                <p className="toolsContainer__item--fontSize">.</p>
+              </section>
+            ) : (
+              diceResults.map((result, index) => {
+                return (
+                  <section key={index} className={`diceLayout__grid--item`}>
+                    <p key={index} className="toolsContainer__item--fontSize">
+                      {result}
+                    </p>
+                  </section>
+                )
+              })
+            )}
+          </section>
+        )
+      })()}
+
+      {/* {diceResults.length === 0 ? (
         <section className="toolsContainer__item--square toolsContainer__item">
           <p className="toolsContainer__item--fontSize">.</p>
         </section>
       ) : (
         diceResults.map((result, index) => {
-          let valueWithHeight
-          switch (numberDices) {
-            case 3:
-              valueWithHeight = '6rem'
-              break
-            default:
-              console.log(valueWithHeight)
-              break
+          let classDisplayLayout = 'Pas de class layout'
+          if (numberDices === 3) {
+            classDisplayLayout = 'diceLayout__grid-3'
+          } else {
+            console.log(classDisplayLayout)
           }
+
           return (
-            <section
-              key={index}
-              className="toolsContainer__item--square toolsContainer__item"
-              style={{ width: valueWithHeight, height: valueWithHeight }}
-            >
-              <p key={index} className="toolsContainer__item--fontSize">
-                {result}
-              </p>
+            <section className="diceLayout">
+              <section
+                key={index}
+                className={`toolsContainer__item--square 
+              toolsContainer__item 
+              ${classDisplayLayout}
+              `}
+              >
+                <p key={index} className="toolsContainer__item--fontSize">
+                  {result}
+                </p>
+              </section>
             </section>
           )
         })
-      )}
+      )} */}
 
       <BoardController
         controllerParams={controllerParams}

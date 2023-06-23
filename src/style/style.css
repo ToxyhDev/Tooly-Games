@@ -357,6 +357,31 @@ input[type=number]::-webkit-outer-spin-button {
   box-shadow: var(--color-medium) 6px 4px;
 }
 
+.diceLayout {
+  border: 1px solid red;
+  width: 100%;
+  display: grid;
+  gap: 1.25rem;
+  justify-content: center;
+  padding-top: 3rem;
+}
+.diceLayout__grid--item {
+  border: 0.25rem solid var(--color-font);
+  background-color: var(--color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.2rem;
+}
+.diceLayout__grid-1 {
+  grid-template-columns: 10rem;
+  grid-template-rows: 10rem;
+}
+.diceLayout__grid-3 {
+  grid-template-columns: 5rem 5rem 5rem 5rem;
+  grid-template-rows: 5rem 5rem 5rem;
+}
+
 .toolsContainer {
   display: flex;
   flex-direction: column;

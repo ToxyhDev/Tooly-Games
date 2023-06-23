@@ -1,0 +1,26 @@
+.diceLayout {
+  border: 1px solid red;
+  width: 100%;
+  display: grid;
+  gap: $size-medium2;
+  justify-content: center;
+  padding-top: $size-large2;
+  &__grid {
+    &--item {
+      border: $border-medium solid var(--color-font);
+      background-color: var(--color-light);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: $borderRaduis-large;
+    }
+    &-1 {
+      grid-template-columns: 10rem;
+      grid-template-rows: 10rem;
+    }
+    &-3 {
+      grid-template-columns: 5rem 5rem 5rem 5rem;
+      grid-template-rows: 5rem 5rem 5rem;
+    }
+  }
+}
