@@ -104,12 +104,14 @@ export default function RandomLetter() {
       click: alphabet.length > 0 ? generateRandomLetter : null,
       value: alphabet.length > 0 ? 'generate' : 'null',
       type: 'button',
+      text: 'Générer',
     },
     {
       id: 1,
       click: resetGenerator,
       value: 'delete',
       type: 'button',
+      text: 'Reset',
     },
   ]
 

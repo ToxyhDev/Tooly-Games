@@ -14,14 +14,16 @@ export default function Home() {
     {
       id: 2,
       className: 'button-Standard',
-      text: 'Configurer votre interface',
-      path: '/config-interface',
+      text: 'Prochainement',
+      // text: 'Configurer votre interface',
+      // path: '/config-interface',
     },
     {
       id: 3,
       className: 'button-Standard',
-      text: 'Interface préconfigurés',
-      path: '/preconf-interface',
+      text: 'Prochainement',
+      // text: 'Interface préconfigurés',
+      // path: '/preconf-interface',
     },
   ]
 
@@ -44,8 +46,8 @@ export default function Home() {
           ))}
         </section>
         <section className="nav-others">
-          {buttonOthers.map(({ id, className, icon, path }, index) => (
-            <Link key={index} to={path}>
+          {buttonOthers.map(({ id, className, icon, path, target }, index) => (
+            <Link key={index} to={path} target={target}>
               <Button key={index} id={id} className={className} icon={icon} />
             </Link>
           ))}

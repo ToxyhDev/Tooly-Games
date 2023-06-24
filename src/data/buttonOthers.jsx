@@ -5,7 +5,7 @@ export const buttonOthers = [
     id: 1,
     className: 'button--small button-others button-others-fill',
     icon: <IconBook />,
-    path: '/doc',
+    path: '/information',
   },
   {
     id: 2,
@@ -15,7 +15,10 @@ export const buttonOthers = [
   },
   {
     id: 3,
-    className: 'button--small button-others button-others-fill',
+    className:
+      'button--small button-others button-others-fill button__donation',
     icon: <IconCofee />,
+    path: 'https://ko-fi.com/toxdev',
+    target: '_blank',
   },
 ]
