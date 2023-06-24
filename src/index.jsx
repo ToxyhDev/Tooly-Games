@@ -7,6 +7,7 @@ import Accessories from './pages/Accessories/index.jsx'
 import Accessory from './pages/Accessory/index.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Settings from './pages/Settings/index.jsx'
+import Information from './pages/Information/index.jsx'
 
 function App() {
   const [theme, setTheme] = useState('')
@@ -33,6 +34,7 @@ function App() {
             <Route index element={<Accessories />} />
             <Route path="/accessoires/:path" element={<Accessory />} />
           </Route>
+          <Route path="/information" element={<Information />} />
           <Route path="/settings" element={<Settings />} />
 
           <Route path="*" element={<ErrorPage />} />

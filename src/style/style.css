@@ -59,7 +59,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
   padding: 16px;
 }
 
@@ -75,7 +74,11 @@ body {
 a {
   text-decoration: none;
   font-weight: normal;
-  color: none;
+  color: var(--color-dark);
+}
+
+a:hover {
+  text-decoration: underline var(--color-neon);
 }
 
 h1 {
@@ -193,6 +196,45 @@ li {
   background-color: transparent;
 }
 
+.information__items {
+  margin-top: 1.5rem;
+  border: solid 0.25rem var(--color-font);
+  border-radius: 0.8rem;
+  background-color: var(--color-light);
+}
+.information__items-color {
+  background-color: var(--color-medium);
+}
+.information__items--title {
+  text-align: left;
+  padding-left: 0.5rem;
+  font-style: italic;
+  text-decoration: underline var(--color-neon);
+}
+.information__items--text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+}
+.information__items--text:first-of-type {
+  padding-top: 1rem;
+}
+.information__items--text:last-child {
+  padding-bottom: 1rem;
+}
+.information__items--text-font {
+  font-size: 1.25rem;
+}
+.information__dev {
+  margin-top: 3rem;
+  font-size: 1.25rem;
+  font-style: italic;
+}
+.information__dev-underline {
+  text-decoration: underline var(--color-neon);
+}
+
 .name {
   display: flex;
   align-items: baseline;
@@ -241,6 +283,9 @@ li {
   width: 2rem;
   height: 2rem;
 }
+.button__donation {
+  background-color: #ff5f5f;
+}
 .button-others svg {
   height: 100%;
   width: 100%;
@@ -285,6 +330,10 @@ li {
 .BoardControl--params {
   background-color: var(--color-light);
   box-shadow: var(--color-medium) 6px 4px;
+}
+.BoardControl--params-layout {
+  display: flex;
+  flex-direction: column;
 }
 .BoardControl--settings {
   background-color: var(--color-medium);

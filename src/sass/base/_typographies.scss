@@ -1,7 +1,10 @@
 a {
   text-decoration: none;
   font-weight: normal;
-  color: none;
+  color: var(--color-dark);
+}
+a:hover {
+  text-decoration: underline var(--color-neon);
 }
 h1 {
   color: var(--color-font);

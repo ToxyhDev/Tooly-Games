@@ -2,8 +2,9 @@
 
 ## To do:
 
-- [ ] Create the information page
-- [ ] Create reponsive configuration for single page with no scroll
+- [x] Create the information page
+- [x] Create reponsive configuration for single page with no scroll
+- [ ] Test BETA version 
 
 ## Doc codebase
 

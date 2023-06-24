@@ -24,6 +24,7 @@ export default function BoardController({ controllerParams, controlType }) {
           valueMax,
           options,
           title,
+          text,
         }) => {
           //configure the icon according to its configuration
           let buttonContent
@@ -59,6 +60,7 @@ export default function BoardController({ controllerParams, controlType }) {
                     key={id}
                     click={click}
                     buttonContent={buttonContent}
+                    text={text}
                   />
                 )
               } else {

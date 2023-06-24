@@ -54,18 +54,10 @@ also listed in localStorage */
       click: generateRandomNumber,
       value: 'generate',
       type: 'button',
+      text: 'Générer',
     },
     {
       id: 1,
-      click: () => {
-        localStorage.removeItem('diceResults')
-        setDiceResults([])
-      },
-      value: 'restart',
-      type: 'button',
-    },
-    {
-      id: 2,
       click: () => {
         localStorage.removeItem('faceDiceMax')
         localStorage.removeItem('numberDices')
@@ -76,6 +68,7 @@ also listed in localStorage */
       },
       value: 'delete',
       type: 'button',
+      text: 'Reset',
     },
   ]
 

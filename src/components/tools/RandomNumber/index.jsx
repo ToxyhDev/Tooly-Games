@@ -13,6 +13,7 @@ also listed in localStorage */
     setNumberMax(n)
     setNumber(n)
   }
+
   /* generate random number */
   function generateRandomNumber() {
     const randomNumber = Math.floor(Math.random() * numberMax) + 1
@@ -33,12 +34,14 @@ also listed in localStorage */
       click: generateRandomNumber,
       value: 'generate',
       type: 'button',
+      text: 'Générer',
     },
     {
       id: 1,
       click: () => setNumberMax(6),
       value: 'delete',
       type: 'button',
+      text: 'Reset',
     },
   ]
 
