@@ -78,7 +78,8 @@ a {
 }
 
 a:hover {
-  text-decoration: underline var(--color-neon);
+  text-decoration: underline;
+  text-decoration-color: var(--color-neon);
 }
 
 h1 {
@@ -92,6 +93,7 @@ h2 {
   font-family: "Rowdies", sans-serif;
   font-size: 1.5rem;
   margin: 0;
+  color: var(--color-font);
 }
 
 h3,
@@ -106,6 +108,7 @@ li {
   font-family: "Rowdies", sans-serif;
   font-size: 1.5rem;
   margin: 0;
+  color: var(--color-font);
 }
 
 .nav {
@@ -180,7 +183,8 @@ li {
 }
 .settings__localStorage--delete-attention {
   font-size: 1.25rem;
-  text-decoration: underline red;
+  text-decoration: underline;
+  text-decoration-color: red;
 }
 .settings__localStorage--delete-choice {
   margin-top: 1.25rem;
@@ -209,7 +213,8 @@ li {
   text-align: left;
   padding-left: 0.5rem;
   font-style: italic;
-  text-decoration: underline var(--color-neon);
+  text-decoration: underline;
+  text-decoration-color: var(--color-neon);
 }
 .information__items--text {
   display: flex;
@@ -232,7 +237,8 @@ li {
   font-style: italic;
 }
 .information__dev-underline {
-  text-decoration: underline var(--color-neon);
+  text-decoration: underline;
+  text-decoration-color: var(--color-neon);
 }
 
 .name {

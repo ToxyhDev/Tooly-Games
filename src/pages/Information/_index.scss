@@ -11,7 +11,8 @@
       text-align: left;
       padding-left: $size-small2;
       font-style: italic;
-      text-decoration: underline var(--color-neon);
+      text-decoration: underline;
+      text-decoration-color: var(--color-neon);
     }
     &--text {
       display: flex;
@@ -34,7 +35,8 @@
     font-size: $size-medium2;
     font-style: italic;
     &-underline {
-      text-decoration: underline var(--color-neon);
+      text-decoration: underline;
+      text-decoration-color: var(--color-neon);
     }
   }
 }
