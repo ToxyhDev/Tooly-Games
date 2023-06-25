@@ -5,7 +5,7 @@ export const IconRandom = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="BoardControl__button--svgStroke"
+      className="svg__stroke--color svg__size"
       width="44"
       height="44"
       viewBox="0 0 24 24"
@@ -28,7 +28,7 @@ export const IconRestart = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="BoardControl__button--svgStroke"
+      className="svg__stroke--color svg__size"
       width="44"
       height="44"
       viewBox="0 0 24 24"
@@ -49,7 +49,7 @@ export const IconDelete = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="BoardControl__button--svgStroke"
+      className="svg__stroke--color svg__size"
       width="44"
       height="44"
       viewBox="0 0 24 24"
@@ -73,7 +73,7 @@ export const IconAdd = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="BoardControl__button--svgStroke"
+      className="svg__stroke--color svg__size"
       width="44"
       height="44"
       viewBox="0 0 24 24"
@@ -95,7 +95,7 @@ export const IconRemove = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="BoardControl__button--svgStroke"
+      className="svg__stroke--color svg__size"
       width="44"
       height="44"
       viewBox="0 0 24 24"
@@ -116,7 +116,7 @@ export const IconPlay = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="BoardControl__button--svgStroke"
+      className="svg__stroke--color svg__size"
       width="44"
       height="44"
       viewBox="0 0 24 24"

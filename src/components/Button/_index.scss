@@ -3,51 +3,38 @@
   border-radius: $borderRaduis-medium;
 
   cursor: pointer;
-  &-CTA {
+  &__cta {
     background-color: var(--color-neon);
-    color: var(--color-background);
     box-shadow: var(--color-medium) $boxShadow-medium;
     width: 100%;
     min-height: $size-large3;
+    &--text {
+      color: var(--color-background);
+    }
   }
-  &-Standard {
+  &__standard {
     background-color: var(--color-light);
     color: var(--color-font);
     box-shadow: var(--color-medium) $boxShadow-medium;
     width: 100%;
     min-height: $size-large3;
-    &__flex {
+    &--flex {
       display: flex;
       align-items: center;
     }
   }
-  &--small {
+  &__small {
     width: $size-large2;
     height: $size-large2;
     background-color: var(--color-medium);
     color: var(--color-font);
   }
-  &--svg {
-    margin-right: $size-medium2;
-    width: $size-large1;
-    height: $size-large1;
-  }
-  &__donation {
-    background-color: #ff5f5f;
+
+  &__svg--center {
+    display: flex;
   }
 
-  &-others {
-    svg {
-      height: 100%;
-      width: 100%;
-      // fill: var(--color-font);
-      padding: 0;
-    }
-    &-stroke {
-      stroke: var(--color-font);
-    }
-    &-fill {
-      fill: var(--color-font);
-    }
+  &__donation {
+    background-color: #ff5f5f;
   }
 }

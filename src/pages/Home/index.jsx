@@ -7,20 +7,21 @@ export default function Home() {
   const buttonMenu = [
     {
       id: 1,
-      className: 'button-CTA',
+      className: 'button__cta',
+      textClassName: 'button__cta--text',
       text: 'Utiliser un accessoire',
       path: '/accessoires',
     },
     {
       id: 2,
-      className: 'button-Standard',
+      className: 'button__standard',
       text: 'Prochainement',
       // text: 'Configurer votre interface',
       // path: '/config-interface',
     },
     {
       id: 3,
-      className: 'button-Standard',
+      className: 'button__standard',
       text: 'Prochainement',
       // text: 'Interface préconfigurés',
       // path: '/preconf-interface',
@@ -34,18 +35,21 @@ export default function Home() {
       </header>
 
       <nav className="nav">
-        <section className="nav-main">
-          {buttonMenu.map(({ id, className, text, path }, index) => (
-            <Link key={index} to={path}>
-              <Button
-                id={id}
-                className={`nav--button ${className}`}
-                text={text}
-              />
-            </Link>
-          ))}
+        <section className="nav__main">
+          {buttonMenu.map(
+            ({ id, className, textClassName, text, path }, index) => (
+              <Link key={index} to={path}>
+                <Button
+                  id={id}
+                  className={`nav__main--button ${className}`}
+                  text={text}
+                  textClassName={textClassName}
+                />
+              </Link>
+            )
+          )}
         </section>
-        <section className="nav-others">
+        <section className="nav__main--others">
           {buttonOthers.map(({ id, className, icon, path, target }, index) => (
             <Link key={index} to={path} target={target}>
               <Button key={index} id={id} className={className} icon={icon} />

@@ -5,17 +5,23 @@
   flex-direction: column;
   margin-top: 10%;
   width: 100%;
-  &-main {
+  &__main {
     width: 100%;
-  }
-
-  &-others {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20%;
-  }
-  &--button {
-    margin-top: $size-medium2;
+    &--button {
+      margin-top: $size-medium2;
+      width: 100%;
+      height: $size-large2;
+      &-svg {
+        margin-right: $size-medium2;
+        width: $size-large1;
+        height: $size-large1;
+      }
+    }
+    &--others {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20%;
+    }
   }
 }

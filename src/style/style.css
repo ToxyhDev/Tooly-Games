@@ -71,7 +71,22 @@ body {
   height: 100%;
 }
 
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
 a {
+  font-family: "Rowdies", sans-serif;
+  font-size: 1.5rem;
+  margin: 0;
   text-decoration: none;
   font-weight: normal;
   color: var(--color-dark);
@@ -99,7 +114,6 @@ h2 {
 h3,
 h4,
 p,
-a,
 input,
 select,
 textarea,
@@ -111,6 +125,17 @@ li {
   color: var(--color-font);
 }
 
+.svg__size {
+  width: 100%;
+  height: 100%;
+}
+.svg__fill--color {
+  fill: var(--color-font);
+}
+.svg__stroke--color {
+  stroke: var(--color-font);
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -118,17 +143,24 @@ li {
   margin-top: 10%;
   width: 100%;
 }
-.nav-main {
+.nav__main {
   width: 100%;
 }
-.nav-others {
+.nav__main--button {
+  margin-top: 1.25rem;
+  width: 100%;
+  height: 3rem;
+}
+.nav__main--button-svg {
+  margin-right: 1.25rem;
+  width: 2rem;
+  height: 2rem;
+}
+.nav__main--others {
   width: 100%;
   display: flex;
   justify-content: space-around;
   margin-top: 20%;
-}
-.nav--button {
-  margin-top: 1.25rem;
 }
 
 .settings__items {
@@ -260,48 +292,37 @@ li {
   border-radius: 0.8rem;
   cursor: pointer;
 }
-.button-CTA {
+.button__cta {
   background-color: var(--color-neon);
-  color: var(--color-background);
   box-shadow: var(--color-medium) 6px 4px;
   width: 100%;
   min-height: 4rem;
 }
-.button-Standard {
+.button__cta--text {
+  color: var(--color-background);
+}
+.button__standard {
   background-color: var(--color-light);
   color: var(--color-font);
   box-shadow: var(--color-medium) 6px 4px;
   width: 100%;
   min-height: 4rem;
 }
-.button-Standard__flex {
+.button__standard--flex {
   display: flex;
   align-items: center;
 }
-.button--small {
+.button__small {
   width: 3rem;
   height: 3rem;
   background-color: var(--color-medium);
   color: var(--color-font);
 }
-.button--svg {
-  margin-right: 1.25rem;
-  width: 2rem;
-  height: 2rem;
+.button__svg--center {
+  display: flex;
 }
 .button__donation {
   background-color: #ff5f5f;
-}
-.button-others svg {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-}
-.button-others-stroke {
-  stroke: var(--color-font);
-}
-.button-others-fill {
-  fill: var(--color-font);
 }
 
 .header {
@@ -326,7 +347,7 @@ li {
   border: 0.25rem solid var(--color-font);
   border-radius: 0.8rem;
   margin-top: 2rem;
-  padding: 1.25rem;
+  padding: 0.5rem;
   width: 70%;
   display: flex;
   flex-wrap: wrap;
@@ -340,26 +361,26 @@ li {
 .BoardControl--params-layout {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.8rem;
+  padding: 0.25rem;
+}
+.BoardControl--params-layout:hover {
+  background-color: var(--color-medium);
 }
 .BoardControl--settings {
   background-color: var(--color-medium);
   box-shadow: var(--color-neon) 6px 4px;
 }
 .BoardControl__button {
+  width: 2rem;
+  height: 2rem;
   padding: 0;
   border: none;
   border-radius: 0.8rem;
   background-color: transparent;
   transition: background-color 300ms ease-out;
-}
-.BoardControl__button:hover {
-  background-color: var(--color-medium);
-}
-.BoardControl__button--svgStroke {
-  vertical-align: middle;
-  stroke: var(--color-font);
-  width: 3rem;
-  height: 3rem;
 }
 .BoardControl__label {
   display: none;
@@ -376,18 +397,6 @@ li {
   background-color: var(--color-light);
   border: solid var(--color-light);
   border-radius: 0.8rem;
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
-  appearance: textfield;
-}
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  appearance: none;
-  margin: 0;
 }
 
 .randomLetter__lettersAppeared {
