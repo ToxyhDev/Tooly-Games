@@ -300,6 +300,7 @@ button {
   width: 50px;
   padding: 0;
   filter: drop-shadow(3px 2px var(--color-medium));
+  transition: filter 0.1s;
 }
 @media screen and (max-width: 426px) {
   .name__dice {

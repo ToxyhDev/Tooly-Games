@@ -14,6 +14,8 @@
     padding: 0;
 
     filter: drop-shadow($boxShadow-thin var(--color-medium));
+    transition: filter 0.1s;
+
     @include mobile-only {
       height: 3rem;
       width: 3rem;
