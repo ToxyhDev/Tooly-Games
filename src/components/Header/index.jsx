@@ -45,12 +45,19 @@ export default function Header() {
         className={`button__small`}
         icon={iconBack}
         click={handleGoBack}
+        svgClassName={'button__small--size'}
       />
 
       <Name></Name>
 
       <Link to={'/'}>
-        <Button className={`button__small`} icon={iconHome}></Button>
+        <Button
+          className={`button__small`}
+          icon={iconHome}
+          svgClassName={'button__small--size'}
+        >
+          {' '}
+        </Button>
       </Link>
     </header>
   )

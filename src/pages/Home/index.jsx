@@ -52,7 +52,13 @@ export default function Home() {
         <section className="nav__main--others">
           {buttonOthers.map(({ id, className, icon, path, target }, index) => (
             <Link key={index} to={path} target={target}>
-              <Button key={index} id={id} className={className} icon={icon} />
+              <Button
+                key={index}
+                id={id}
+                className={className}
+                icon={icon}
+                svgClassName={'button__small--size'}
+              />
             </Link>
           ))}
         </section>

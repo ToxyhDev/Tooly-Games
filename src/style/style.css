@@ -47,6 +47,11 @@
 html {
   font-size: 100%;
 }
+@media screen and (max-width: 426px) {
+  html {
+    font-size: 75%;
+  }
+}
 
 body {
   margin: 0;
@@ -123,6 +128,10 @@ li {
   font-size: 1.5rem;
   margin: 0;
   color: var(--color-font);
+}
+
+button {
+  padding: 0.5rem;
 }
 
 .svg__size {
@@ -278,13 +287,28 @@ li {
   align-items: baseline;
   justify-content: center;
 }
+@media screen and (max-width: 426px) {
+  .name {
+    align-items: end;
+  }
+}
 .name__letters {
   text-shadow: var(--color-medium) 4px 2px;
 }
 .name__dice {
   height: 50px;
   width: 50px;
+  padding: 0;
   filter: drop-shadow(3px 2px var(--color-medium));
+}
+@media screen and (max-width: 426px) {
+  .name__dice {
+    height: 3rem;
+    width: 3rem;
+    padding-right: 0.5rem;
+    padding-bottom: 1.5rem;
+    display: flex;
+  }
 }
 
 .button {
@@ -313,10 +337,14 @@ li {
   align-items: center;
 }
 .button__small {
-  width: 3rem;
-  height: 3rem;
+  width: auto;
+  height: auto;
   background-color: var(--color-medium);
   color: var(--color-font);
+}
+.button__small--size {
+  width: 2rem;
+  height: 2rem;
 }
 .button__svg--center {
   display: flex;

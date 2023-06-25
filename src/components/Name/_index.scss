@@ -2,13 +2,24 @@
   display: flex;
   align-items: baseline;
   justify-content: center;
-  // margin-top: 10%;
+  @include mobile-only {
+    align-items: end;
+  }
   &__letters {
     text-shadow: var(--color-medium) 4px 2px;
   }
   &__dice {
     height: 50px;
     width: 50px;
+    padding: 0;
+
     filter: drop-shadow($boxShadow-thin var(--color-medium));
+    @include mobile-only {
+      height: 3rem;
+      width: 3rem;
+      padding-right: 0.5rem;
+      padding-bottom: 1.5rem;
+      display: flex;
+    }
   }
 }

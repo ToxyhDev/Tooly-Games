@@ -1,5 +1,8 @@
 html {
   font-size: $global-size;
+  @include mobile-only {
+    font-size: 75%;
+  }
 }
 body {
   margin: 0;

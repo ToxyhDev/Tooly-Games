@@ -11,13 +11,15 @@ export default function Button({
 }) {
   return (
     <button key={id} className={`${className} button`} onClick={click}>
-      <div
-        className={`button__svg--center ${
-          svgClassName !== undefined ? svgClassName : ''
-        }`}
-      >
-        {icon === undefined ? null : icon}
-      </div>
+      {icon === undefined ? null : (
+        <div
+          className={`button__svg--center ${
+            svgClassName !== undefined ? svgClassName : ''
+          }`}
+        >
+          {icon}
+        </div>
+      )}
 
       {text !== undefined ? <p className={textClassName}>{text}</p> : undefined}
     </button>
