@@ -80,7 +80,6 @@ export default function Settings() {
                   Voulez-vous supprimer ?
                 </p>
                 <div className="settings__localStorage--delete-choice">
-                  {/* <Link to={'/'}> */}
                   <Button
                     text={'Oui'}
                     click={() => {
@@ -92,7 +91,6 @@ export default function Settings() {
                     }}
                     className={'yes'}
                   />
-                  {/* </Link> */}
                   <Button
                     text={'Non'}
                     click={() => setDeleteLocalStorage(true)}
