@@ -99,3 +99,8 @@ $borderRaduis-large: 1.2rem;
 
 $boxShadow-thin: 3px 2px;
 $boxShadow-medium: 6px 4px;
+
+$breakpoints: (
+  tablet: 769px,
+  mobile: 426px,
+);

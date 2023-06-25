@@ -3,6 +3,7 @@ import Header from '../../components/Header'
 import TitleTools from '../../components/TitleTools'
 import { IconDelete } from '../../assets/svgBoardController'
 import Button from '../../components/Button'
+// import { Link } from 'react-router-dom'
 
 export default function Settings() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || '')
@@ -13,7 +14,7 @@ export default function Settings() {
     document.getElementById('body').className = theme
     localStorage.setItem('theme', theme)
   }
-
+  const defaultTheme = 'theme-blue'
   const listTheme = [
     {
       id: 1,
@@ -83,6 +84,9 @@ export default function Settings() {
                     text={'Oui'}
                     click={() => {
                       localStorage.clear()
+                      localStorage.setItem('theme', defaultTheme)
+                      setTheme(defaultTheme)
+                      document.getElementById('body').className = defaultTheme
                       setDeleteLocalStorage(true)
                     }}
                     className={'yes'}

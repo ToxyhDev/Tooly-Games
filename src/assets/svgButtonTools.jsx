@@ -6,7 +6,7 @@ export const IconDice = () => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="button--svg"
+      className="svg__fill--color svg__size"
     >
       <path
         d="M16.9451 5.05518C15.8405 5.05518 14.9451 5.95061 14.9451 7.05518C14.9451 8.15975 15.8405 9.05518 16.9451 9.05518C18.0496 9.05518 18.9451 8.15975 18.9451 7.05518C18.9451 5.95061 18.0496 5.05518 16.9451 5.05518Z"
@@ -50,7 +50,7 @@ export const IconA = () => {
       height="32"
       fill="#000000"
       viewBox="0 0 256 256"
-      className="button--svg"
+      className="svg__fill--color svg__size"
     >
       <path d="M60.59,175.24a8,8,0,0,0,10.65-3.83L87.9,136h80.2l16.66,35.41a8,8,0,1,0,14.48-6.82l-64-136a8,8,0,0,0-14.48,0l-64,136A8,8,0,0,0,60.59,175.24ZM128,50.79,160.57,120H95.43ZM224,216a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,216Z"></path>
     </svg>
@@ -69,7 +69,7 @@ export const IconNumber = () => {
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="button--svg"
+      className="svg__stroke--color svg__size"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M3 10l2 -2v8" />

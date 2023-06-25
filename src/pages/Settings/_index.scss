@@ -53,7 +53,8 @@
       }
       &-attention {
         font-size: $size-medium2;
-        text-decoration: underline red;
+        text-decoration: underline;
+        text-decoration-color: red;
       }
       &-choice {
         margin-top: $size-medium2;
