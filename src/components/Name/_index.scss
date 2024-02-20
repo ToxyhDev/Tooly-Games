@@ -6,14 +6,14 @@
     align-items: end;
   }
   &__letters {
-    text-shadow: var(--color-medium) 4px 2px;
+    text-shadow: var(--color-neon) 2px 2px;
   }
   &__dice {
     height: 50px;
     width: 50px;
     padding: 0;
 
-    filter: drop-shadow($boxShadow-thin var(--color-medium));
+    filter: drop-shadow($boxShadow-thin var(--color-neon));
     transition: filter 0.1s;
 
     @include mobile-only {

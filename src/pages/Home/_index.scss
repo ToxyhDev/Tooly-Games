@@ -1,16 +1,21 @@
 .nav {
   display: flex;
-  // justify-content: center;
   align-items: center;
   flex-direction: column;
+  justify-content: space-around;
+  gap: 32px;
   margin-top: 10%;
   width: 100%;
+  height: 100%;
   &__main {
-    width: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
     &--button {
-      margin-top: $size-medium2;
-      width: 100%;
-      height: $size-large2;
+      width: 90%;
       &-svg {
         margin-right: $size-medium2;
         width: $size-large1;

@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client'
 import ErrorPage from './components/Error/index.jsx'
 import './style/style.css'
 import Home from './pages/Home/index.jsx'
-import Accessories from './pages/Accessories/index.jsx'
 import Accessory from './pages/Accessory/index.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Settings from './pages/Settings/index.jsx'
@@ -29,10 +28,11 @@ function App() {
     <section id="body" className={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/accessoires">
-            <Route index element={<Accessories />} />
-            <Route path="/accessoires/:path" element={<Accessory />} />
+          <Route path="/">
+            <Route index element={<Home />} />
+            {/* <Route path="/accessoires">
+            <Route index element={<Accessories />} /> */}
+            <Route path="/:path" element={<Accessory />} />
           </Route>
           <Route path="/information" element={<Information />} />
           <Route path="/settings" element={<Settings />} />
@@ -45,19 +45,3 @@ function App() {
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />)
-// ReactDOM.createRoot(document.getElementById('root')).render(
-//   <section id="body" className="color-blue">
-//     <BrowserRouter>
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/accessoires">
-//           <Route index element={<Accessories />} />
-//           <Route path="/accessoires/:path" element={<Accessory />} />
-//         </Route>
-//         <Route path="/settings" element={<Settings />} />
-
-//         <Route path="*" element={<ErrorPage />} />
-//       </Routes>
-//     </BrowserRouter>
-//   </section>
-// )
