@@ -1,19 +1,13 @@
-# Tooly
+# Tooly Games
 
-## To do:
+## 🎮 Games :
 
-- [x] Create the information page
-- [x] Create reponsive configuration for single page with no scroll
-- [ ] Test BETA version 
+- Letters generator
+- Numbers generator
+- Dices
 
-## Doc codebase
+# ⚙️ Functionnality : 
 
-### ClassName index
-
-- 
-
-### Configuration tool
-
-- 
-
+- Change the interface (blue, red, green, yellow)
+- Delete the local storage
 
