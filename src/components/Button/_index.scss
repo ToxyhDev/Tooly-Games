@@ -1,6 +1,7 @@
 .button {
   border: $border-medium var(--color-font) solid;
   border-radius: $borderRaduis-medium;
+  margin: 0 5px;
 
   cursor: pointer;
   &__cta {
@@ -15,7 +16,7 @@
   &__standard {
     background-color: var(--color-light);
     color: var(--color-font);
-    box-shadow: var(--color-medium) $boxShadow-medium;
+    box-shadow: var(--color-neon) $boxShadow-medium;
     width: 100%;
     min-height: $size-large3;
     &--flex {

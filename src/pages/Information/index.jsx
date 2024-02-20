@@ -9,7 +9,7 @@ export default function Information() {
       <section className="information__items information__items-color">
         <p className="information__items--title">Versions :</p>
         <div className="information__items--text">
-          <p className="information__items--text-version">BETA-1</p>
+          <p className="information__items--text-version">BETA-2</p>
         </div>
       </section>
 
