@@ -64,7 +64,7 @@ jobs:
     #- name: Test
     #  run: npm test
     - name: Deploy🚀
-      uses: ToxyhDev/github-pages-deploy-action@v4
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages
         folder: build
