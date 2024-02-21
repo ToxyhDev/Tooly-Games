@@ -1,6 +1,7 @@
 {
   "name": "tooly-games",
   "version": "0.1.0",
+  "homepage": "https://toxyhdev.github.io/Tooly-Games/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
