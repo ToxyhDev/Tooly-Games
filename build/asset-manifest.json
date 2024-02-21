@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.9f49ca9b.css",
-    "main.js": "/static/js/main.2c78c385.js",
-    "index.html": "/index.html",
-    "main.9f49ca9b.css.map": "/static/css/main.9f49ca9b.css.map",
-    "main.2c78c385.js.map": "/static/js/main.2c78c385.js.map"
+    "main.css": "/Tooly-Games/static/css/main.6259cd38.css",
+    "main.js": "/Tooly-Games/static/js/main.3e6ddaec.js",
+    "index.html": "/Tooly-Games/index.html",
+    "main.6259cd38.css.map": "/Tooly-Games/static/css/main.6259cd38.css.map",
+    "main.3e6ddaec.js.map": "/Tooly-Games/static/js/main.3e6ddaec.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f49ca9b.css",
-    "static/js/main.2c78c385.js"
+    "static/css/main.6259cd38.css",
+    "static/js/main.3e6ddaec.js"
   ]
 }
