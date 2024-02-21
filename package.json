@@ -19,7 +19,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass": "sass --watch ./src/index.scss:./src/style/style.css"
+    "sass": "sass --watch ./src/index.scss:./src/style/style.css",
+    "predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+
   },
   "eslintConfig": {
     "extends": [
