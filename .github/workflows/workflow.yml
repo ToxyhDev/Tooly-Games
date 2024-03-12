@@ -1,13 +1,13 @@
-name: Build and Deploy
+- name: Build and Deploy
 
-on:
+- on:
   push:
     branches: ["main"]
 
-permissions:
+- permissions:
   contents: write
 
-jobs:
+- jobs:
   build-deploy:
     runs-on: ubuntu-latest
 
