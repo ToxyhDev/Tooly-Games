@@ -1,4 +1,4 @@
-# Tooly Games
+# Tooly Games 🎲
 
 ## 🎮 Games :
 
