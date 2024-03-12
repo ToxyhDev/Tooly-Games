@@ -20,7 +20,7 @@ export default function Information() {
             Si vous rencontrez un problème en utilisant Tooly, faites le moi
             savoir ⬇️
           </p>
-          <a href="mailto:contact@tox-dev.fr">Me Contacter</a>
+          <a href="mailto:tomwebdev.contact@gmail.com">Me Contacter</a>
         </div>
       </section>
 

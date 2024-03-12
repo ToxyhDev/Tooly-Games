@@ -26,14 +26,11 @@ function App() {
 
   return (
     <section id="body" className={theme}>
-      <BrowserRouter>
+      <BrowserRouter basename="Tooly-Games">
         <Routes>
-          <Route path="/">
-            <Route index element={<Home />} />
-            {/* <Route path="/accessoires">
-            <Route index element={<Accessories />} /> */}
-            <Route path="/:path" element={<Accessory />} />
-          </Route>
+          <Route path="/" element={<Home />} />
+
+          <Route path="/:path" element={<Accessory />} />
           <Route path="/information" element={<Information />} />
           <Route path="/settings" element={<Settings />} />
 

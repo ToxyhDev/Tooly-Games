@@ -5,6 +5,7 @@ import { buttonOthers } from '../../data/buttonOthers'
 import Accessories from '../Accessories'
 
 export default function Home() {
+  console.log('home')
   return (
     <>
       <header className="header__margin">
