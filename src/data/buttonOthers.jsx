@@ -17,7 +17,7 @@ export const buttonOthers = [
     id: 3,
     className: 'button__small button__donation',
     icon: <IconCofee />,
-    path: 'https://ko-fi.com/toxdev',
+    path: 'https://ko-fi.com/tomwebdev',
     target: '_blank',
   },
 ]
